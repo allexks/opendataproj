@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7407D00723BF6ED70023E92E /* OpenDataAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00623BF6ED70023E92E /* OpenDataAPIService.swift */; };
+		7407D00A23BF95A70023E92E /* ResourceMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00923BF95A70023E92E /* ResourceMetadata.swift */; };
+		7407D00C23BF98920023E92E /* ResourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00B23BF98920023E92E /* ResourceData.swift */; };
+		741B91BD23BFDAA100B30F01 /* ResourceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91BC23BFDAA100B30F01 /* ResourceList.swift */; };
 		74D06EF523BE3D24004C09FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D06EF423BE3D24004C09FA /* AppDelegate.swift */; };
 		74D06EF723BE3D24004C09FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D06EF623BE3D24004C09FA /* ViewController.swift */; };
 		74D06EFA23BE3D24004C09FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EF823BE3D24004C09FA /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		7407D00623BF6ED70023E92E /* OpenDataAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataAPIService.swift; sourceTree = "<group>"; };
+		7407D00923BF95A70023E92E /* ResourceMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceMetadata.swift; sourceTree = "<group>"; };
+		7407D00B23BF98920023E92E /* ResourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceData.swift; sourceTree = "<group>"; };
+		741B91BC23BFDAA100B30F01 /* ResourceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceList.swift; sourceTree = "<group>"; };
 		74D06EF123BE3D24004C09FA /* Open Data Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Data Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D06EF423BE3D24004C09FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74D06EF623BE3D24004C09FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				7407D00623BF6ED70023E92E /* OpenDataAPIService.swift */,
+				7407D00923BF95A70023E92E /* ResourceMetadata.swift */,
+				7407D00B23BF98920023E92E /* ResourceData.swift */,
+				741B91BC23BFDAA100B30F01 /* ResourceList.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -205,7 +214,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				74D06EF723BE3D24004C09FA /* ViewController.swift in Sources */,
+				741B91BD23BFDAA100B30F01 /* ResourceList.swift in Sources */,
 				7407D00723BF6ED70023E92E /* OpenDataAPIService.swift in Sources */,
+				7407D00A23BF95A70023E92E /* ResourceMetadata.swift in Sources */,
+				7407D00C23BF98920023E92E /* ResourceData.swift in Sources */,
 				74D06EF523BE3D24004C09FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,33 +10,48 @@ import Foundation
 
 class OpenDataAPIService {
 
-    func getDataSetResources(_ completion: @escaping ([String: Any]?) -> Void) {
+    func getDataSetResources(_ completion: @escaping (ResourceList?) -> Void) {
         let endpoint: Endpoint = .listResources
-        let jsonRequestBody: [String: Any] = [
+        let jsonRequestBody = [
             "criteria": [
                 "dataset_uri": OpenDataAPIService.dataSetGuid
             ]
         ]
+        
         performPOSTRequest(to: endpoint, withJSONBody: jsonRequestBody) { response in
             guard let response = response else {
                 completion(nil)
                 return
             }
             
-            completion(response)
+            do {
+                let list = try OpenDataAPIService.decoder.decode(ResourceList.self, from: response)
+                completion(list)
+            } catch let err {
+                print("nimoish kodish: \(err.localizedDescription)")
+                completion(nil)
+            }
+            
         }
     }
     
-    func getResourceData(_ resourceGuid: String, completion: @escaping ([String: Any]?) -> Void) {
+    func getResourceData(_ resourceGuid: String, completion: @escaping (ResourceData?) -> Void) {
         let endpoint: Endpoint = .getResourceData
-        let jsonRequestBody: [String: Any] = [:]
+        let jsonRequestBody = ["resource_uri": resourceGuid]
+        
         performPOSTRequest(to: endpoint, withJSONBody: jsonRequestBody) { response in
             guard let response = response else {
                 completion(nil)
                 return
             }
             
-            completion(response)
+            do {
+                let data = try OpenDataAPIService.decoder.decode(ResourceData.self, from: response)
+                completion(data)
+            } catch let err {
+                print("teq danni mai ne sa tolkova otvoreni: \(err.localizedDescription)")
+                completion(nil)
+            }
         }
     }
 }
@@ -56,7 +71,11 @@ private extension OpenDataAPIService {
     
     static let defaultTimeout = TimeInterval(60)
     
-    func performPOSTRequest(to endpoint: Endpoint, withJSONBody body: [String: Any], withCompletion completion: @escaping (_ jsonResponse: [String: Any]?) -> Void) {
+    static let urlSession = URLSession.shared
+    
+    static let decoder = JSONDecoder()
+    
+    func performPOSTRequest(to endpoint: Endpoint, withJSONBody body: [String: Any], withCompletion completion: @escaping (_ jsonResponse: Data?) -> Void) {
         let endpointString = endpoint.rawValue
         let urlString = "\(OpenDataAPIService.APIURI)/\(endpointString)"
         
@@ -79,7 +98,7 @@ private extension OpenDataAPIService {
         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         
         DispatchQueue.global(qos: .userInitiated).async {
-            URLSession.shared.dataTask(with: urlRequest) { data, _, error in
+            OpenDataAPIService.urlSession.dataTask(with: urlRequest) { data, _, error in
                 guard let data = data, error == nil else {
                     print("ni moa fetchna: \(error?.localizedDescription ?? "")")
                     completion(nil)
@@ -98,7 +117,7 @@ private extension OpenDataAPIService {
                 if let jsonResponse = response as? [String: Any],
                     let success = jsonResponse["success"] as? Bool,
                     success == true {
-                    completion(jsonResponse)
+                    completion(data)
                 } else {
                     print(response as Any)
                     completion(nil)
