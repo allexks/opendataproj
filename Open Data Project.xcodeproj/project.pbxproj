@@ -11,8 +11,8 @@
 		7407D00A23BF95A70023E92E /* ResourceMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00923BF95A70023E92E /* ResourceMetadata.swift */; };
 		7407D00C23BF98920023E92E /* ResourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00B23BF98920023E92E /* ResourceData.swift */; };
 		741B91BD23BFDAA100B30F01 /* ResourceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91BC23BFDAA100B30F01 /* ResourceList.swift */; };
+		741B91C423BFEBA800B30F01 /* InitialTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91C323BFEBA800B30F01 /* InitialTableViewController.swift */; };
 		74D06EF523BE3D24004C09FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D06EF423BE3D24004C09FA /* AppDelegate.swift */; };
-		74D06EF723BE3D24004C09FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D06EF623BE3D24004C09FA /* ViewController.swift */; };
 		74D06EFA23BE3D24004C09FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EF823BE3D24004C09FA /* Main.storyboard */; };
 		74D06EFC23BE3D2B004C09FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EFB23BE3D2B004C09FA /* Assets.xcassets */; };
 		74D06EFF23BE3D2B004C09FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EFD23BE3D2B004C09FA /* LaunchScreen.storyboard */; };
@@ -24,9 +24,9 @@
 		7407D00923BF95A70023E92E /* ResourceMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceMetadata.swift; sourceTree = "<group>"; };
 		7407D00B23BF98920023E92E /* ResourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceData.swift; sourceTree = "<group>"; };
 		741B91BC23BFDAA100B30F01 /* ResourceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceList.swift; sourceTree = "<group>"; };
+		741B91C323BFEBA800B30F01 /* InitialTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTableViewController.swift; sourceTree = "<group>"; };
 		74D06EF123BE3D24004C09FA /* Open Data Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Data Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D06EF423BE3D24004C09FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74D06EF623BE3D24004C09FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74D06EF923BE3D24004C09FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74D06EFB23BE3D2B004C09FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74D06EFE23BE3D2B004C09FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +77,29 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		741B91BE23BFE31000B30F01 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				741B91C323BFEBA800B30F01 /* InitialTableViewController.swift */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		741B91C123BFE37400B30F01 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				741B91C223BFE38D00B30F01 /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		741B91C223BFE38D00B30F01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		74D06EE823BE3D24004C09FA = {
 			isa = PBXGroup;
 			children = (
@@ -98,9 +121,10 @@
 		74D06EF323BE3D24004C09FA /* Open Data Project */ = {
 			isa = PBXGroup;
 			children = (
+				741B91C123BFE37400B30F01 /* Common */,
+				741B91BE23BFE31000B30F01 /* Initial */,
 				7407D00523BF6DDD0023E92E /* Networking */,
 				74D06EF423BE3D24004C09FA /* AppDelegate.swift */,
-				74D06EF623BE3D24004C09FA /* ViewController.swift */,
 				7407D00423BF6DB00023E92E /* Storyboards */,
 				74D06EFB23BE3D2B004C09FA /* Assets.xcassets */,
 				74D06F0023BE3D2B004C09FA /* Info.plist */,
@@ -213,11 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D06EF723BE3D24004C09FA /* ViewController.swift in Sources */,
 				741B91BD23BFDAA100B30F01 /* ResourceList.swift in Sources */,
 				7407D00723BF6ED70023E92E /* OpenDataAPIService.swift in Sources */,
 				7407D00A23BF95A70023E92E /* ResourceMetadata.swift in Sources */,
 				7407D00C23BF98920023E92E /* ResourceData.swift in Sources */,
+				741B91C423BFEBA800B30F01 /* InitialTableViewController.swift in Sources */,
 				74D06EF523BE3D24004C09FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +389,7 @@
 			baseConfigurationReference = ED8AAB1D217F8EA26411A919 /* Pods-Open Data Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L24TQ8W95;
 				INFOPLIST_FILE = "Open Data Project/Info.plist";
@@ -375,6 +400,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fmi.swift.Open-Data-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -385,6 +411,7 @@
 			baseConfigurationReference = 7D4A1C4A1B1281DABC9A6F91 /* Pods-Open Data Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L24TQ8W95;
 				INFOPLIST_FILE = "Open Data Project/Info.plist";
@@ -395,6 +422,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fmi.swift.Open-Data-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
