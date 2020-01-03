@@ -49,6 +49,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7407D00423BF6DB00023E92E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				74D06EF823BE3D24004C09FA /* Main.storyboard */,
+				74D06EFD23BE3D2B004C09FA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7407D00523BF6DDD0023E92E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		74D06EE823BE3D24004C09FA = {
 			isa = PBXGroup;
 			children = (
@@ -70,11 +86,11 @@
 		74D06EF323BE3D24004C09FA /* Open Data Project */ = {
 			isa = PBXGroup;
 			children = (
+				7407D00523BF6DDD0023E92E /* Networking */,
 				74D06EF423BE3D24004C09FA /* AppDelegate.swift */,
 				74D06EF623BE3D24004C09FA /* ViewController.swift */,
-				74D06EF823BE3D24004C09FA /* Main.storyboard */,
+				7407D00423BF6DB00023E92E /* Storyboards */,
 				74D06EFB23BE3D2B004C09FA /* Assets.xcassets */,
-				74D06EFD23BE3D2B004C09FA /* LaunchScreen.storyboard */,
 				74D06F0023BE3D2B004C09FA /* Info.plist */,
 			);
 			path = "Open Data Project";
