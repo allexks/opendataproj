@@ -50,7 +50,7 @@ extension OpenDataAPIService {
 
 private extension OpenDataAPIService {
     
-    static let APIURI = "http://data.egov.bg/api"
+    static let APIURI = "https://data.egov.bg/api"
     
     static let dataSetGuid = "f7d45237-a310-4c43-b37f-db434f8edf3d"
     
@@ -58,8 +58,9 @@ private extension OpenDataAPIService {
     
     func performPOSTRequest(to endpoint: Endpoint, withJSONBody body: [String: Any], withCompletion completion: @escaping (_ jsonResponse: [String: Any]?) -> Void) {
         let endpointString = endpoint.rawValue
+        let urlString = "\(OpenDataAPIService.APIURI)/\(endpointString)"
         
-        guard let url = URL(string: "\(OpenDataAPIService.APIURI)/\(endpointString)") else {
+        guard let url = URL(string: urlString) else {
             fatalError("oprai si url-a")
         }
         
@@ -74,6 +75,8 @@ private extension OpenDataAPIService {
         )
         urlRequest.httpMethod = "POST"
         urlRequest.httpBody = httpBody
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         
         DispatchQueue.global(qos: .userInitiated).async {
             URLSession.shared.dataTask(with: urlRequest) { data, _, error in
