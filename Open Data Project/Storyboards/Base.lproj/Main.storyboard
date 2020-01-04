@@ -187,10 +187,26 @@
                     <view key="view" contentMode="scaleToFill" id="XJa-tX-R70">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qbI-g3-Xjx">
+                                <rect key="frame" x="0.0" y="88" width="375" height="281.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qbI-g3-Xjx" secondAttribute="height" multiplier="4:3" id="qfA-vA-Wip"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qbI-g3-Xjx" firstAttribute="leading" secondItem="TLI-Oe-9tG" secondAttribute="leading" id="2Il-Wp-hhL"/>
+                            <constraint firstItem="qbI-g3-Xjx" firstAttribute="top" secondItem="TLI-Oe-9tG" secondAttribute="top" id="DIf-Nh-Wgc"/>
+                            <constraint firstItem="TLI-Oe-9tG" firstAttribute="trailing" secondItem="qbI-g3-Xjx" secondAttribute="trailing" id="qWv-k0-0Af"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TLI-Oe-9tG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Станции" id="U4R-I7-Z4y"/>
+                    <connections>
+                        <outlet property="mapView" destination="qbI-g3-Xjx" id="Y5A-aB-VqH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdG-h9-Mza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

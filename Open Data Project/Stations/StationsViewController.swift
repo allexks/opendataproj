@@ -6,27 +6,23 @@
 //  Copyright © 2020 fmi-swift. All rights reserved.
 //
 
-import UIKit
+import MapKit
 
 class StationsViewController: UIViewController {
     
+    // MARK: - Outlets
+    
+    @IBOutlet private weak var mapView: MKMapView!
+    
+    // MARK: - Properties
+    
     var pmType: PMType!
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // TODO
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
