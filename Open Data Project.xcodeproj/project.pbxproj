@@ -103,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				741B91CB23BFF83900B30F01 /* DataRepository.swift */,
-				741B91D323C0068D00B30F01 /* Extensions */,
 				741B91C223BFE38D00B30F01 /* Models */,
+				741B91D323C0068D00B30F01 /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
