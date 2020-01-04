@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-1304" y="140"/>
         </scene>
-        <!--Добре дошли!-->
+        <!--Начало-->
         <scene sceneID="a3k-sa-MxF">
             <objects>
-                <tableViewController id="0Ds-do-I7r" customClass="InitialTableViewController" customModule="Open_Data_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Начало" id="0Ds-do-I7r" customClass="InitialTableViewController" customModule="Open_Data_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="GD6-FS-ds0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,15 +45,15 @@
                             <tableViewSection headerTitle="Изберете категория" id="LhB-4N-s2q">
                                 <mutableString key="footerTitle">Данни от Националната система за контрол на качеството на атмосферния въздух (https://data.egov.bg/data/view/f7d45237-a310-4c43-b37f-db434f8edf3d) от измерени концентрации на основните показатели за качеството на атмосферния въздух, данните се създават и поддържат съгласно Закона за чистотата на атмосферния въздух. Условия за предоставяне на информация без защитени авторски права.</mutableString>
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ATO-Jf-0bU" style="IBUITableViewCellStyleDefault" id="Kkt-Uw-hPe">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ATO-Jf-0bU" style="IBUITableViewCellStyleDefault" id="Kkt-Uw-hPe">
                                         <rect key="frame" x="0.0" y="110.33333333333334" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kkt-Uw-hPe" id="CwK-ea-MLk">
-                                            <rect key="frame" x="0.0" y="0.0" width="307" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Частици с размер до 2.5 µm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ATO-Jf-0bU">
-                                                    <rect key="frame" x="16" y="0.0" width="291" height="43.666666666666664"/>
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -60,16 +61,19 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="05i-im-dqx" kind="show" identifier="pm25" id="N8E-GR-4E6"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Hrg-pu-K2I" style="IBUITableViewCellStyleDefault" id="LNS-GA-pn2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Hrg-pu-K2I" style="IBUITableViewCellStyleDefault" id="LNS-GA-pn2">
                                         <rect key="frame" x="0.0" y="154.33333333333334" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LNS-GA-pn2" id="aRl-VG-2GS">
-                                            <rect key="frame" x="0.0" y="0.0" width="307" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Частици с размер до 10 µm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hrg-pu-K2I">
-                                                    <rect key="frame" x="16" y="0.0" width="291" height="43.666666666666664"/>
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -77,6 +81,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="05i-im-dqx" kind="show" identifier="pm10" id="7Gz-8B-4Jt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -92,5 +99,105 @@
             </objects>
             <point key="canvasLocation" x="-487" y="140"/>
         </scene>
+        <!--Групиране-->
+        <scene sceneID="tCj-oo-Whx">
+            <objects>
+                <tableViewController id="05i-im-dqx" customClass="GroupingTableViewController" customModule="Open_Data_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="1P1-4i-dWI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Изберете начин на групиране на данните" id="kNs-ui-X4C">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" textLabel="E4g-67-evw" style="IBUITableViewCellStyleDefault" id="rQC-74-TND">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rQC-74-TND" id="aLB-Si-vLN">
+                                            <rect key="frame" x="0.0" y="0.0" width="307" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="По град/станция" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E4g-67-evw">
+                                                    <rect key="frame" x="16" y="0.0" width="291" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="IsB-rI-Gfy" kind="show" identifier="stations" id="5ne-PM-n1D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" textLabel="SD8-cf-8X7" style="IBUITableViewCellStyleDefault" id="7Nr-1j-TYL">
+                                        <rect key="frame" x="0.0" y="99.333333333333343" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Nr-1j-TYL" id="xUw-FZ-Wup">
+                                            <rect key="frame" x="0.0" y="0.0" width="307" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="По период" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SD8-cf-8X7">
+                                                    <rect key="frame" x="16" y="0.0" width="291" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="MK7-WZ-12b" kind="show" identifier="periods" id="Bv6-pa-OEs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="05i-im-dqx" id="XVK-1e-1UO"/>
+                            <outlet property="delegate" destination="05i-im-dqx" id="21n-gd-kds"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Групиране" id="gQK-hY-ODG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eha-Uw-nz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="143"/>
+        </scene>
+        <!--Периоди-->
+        <scene sceneID="aCG-o9-ikf">
+            <objects>
+                <viewController id="MK7-WZ-12b" customClass="PeriodsViewController" customModule="Open_Data_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fBE-Uq-DfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GAb-it-scm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Периоди" id="ToS-43-d7c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zus-7W-u07" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="553"/>
+        </scene>
+        <!--Станции-->
+        <scene sceneID="FaW-YX-Uxj">
+            <objects>
+                <viewController title="Станции" id="IsB-rI-Gfy" customClass="StationsViewController" customModule="Open_Data_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XJa-tX-R70">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TLI-Oe-9tG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Станции" id="U4R-I7-Z4y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AdG-h9-Mza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321" y="-166"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7Gz-8B-4Jt"/>
+    </inferredMetricsTieBreakers>
 </document>
