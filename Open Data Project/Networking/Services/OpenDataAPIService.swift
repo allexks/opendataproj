@@ -89,7 +89,7 @@ private extension OpenDataAPIService {
         
         var urlRequest = URLRequest(
             url: url,
-            cachePolicy: .returnCacheDataElseLoad,
+            cachePolicy: .reloadIgnoringLocalCacheData,
             timeoutInterval: OpenDataAPIService.defaultTimeout
         )
         urlRequest.httpMethod = "POST"
