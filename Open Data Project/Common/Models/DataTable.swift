@@ -20,7 +20,7 @@ struct DataTable {
 
 extension DataTable {
     struct Row {
-        let location: String // TODO: StationLocation
+        let location: StationLocation
         let valuesCount: Int
         let exceedancesCount: Int?
         let maxValue: Double

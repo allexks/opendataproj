@@ -82,7 +82,7 @@ extension ResourceData {
         guard let pmTypeString = name.matches("(10|2.5)( )?µm").first,
             let pmType = PMType.init(rawValue: pmTypeString.starts(with: "10") ?  "10" : "2.5")
         else {
-            fatalError("No PM Type found from name '\(name)'")
+            fatalError("ERROR: No PM Type found from name '\(name)'")
         }
         
         var fromDate: Date?
@@ -96,9 +96,10 @@ extension ResourceData {
         }
 
         let columnNames = self.data[1]
+        
         let rows = self.data[2...].map { row in
             DataTable.Row(
-                location: row[0],
+                location: StationLocation(row[0]),
                 valuesCount: Int(row[1]) ?? 0,
                 exceedancesCount: row.count == 5 ? Int(row[2]) : nil,
                 maxValue: Double(row[row.count == 5 ? 3 : 2]) ?? 0.0,
