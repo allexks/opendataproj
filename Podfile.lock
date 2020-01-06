@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 46a9e17599a7c8cbca307e5f134355c6dfcffc0e
+PODS:
+  - AnyChartiOS (1.0.4)
+
+DEPENDENCIES:
+  - AnyChartiOS (~> 1.0.3)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AnyChartiOS
+
+SPEC CHECKSUMS:
+  AnyChartiOS: 7ce3964cb1ed0918410423beb0856ec0c2606d8f
+
+PODFILE CHECKSUM: 28724a036d2a8d064edd73a43e6539273752e420
 
 COCOAPODS: 1.5.3

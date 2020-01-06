@@ -6,6 +6,9 @@ target 'Open Data Project' do
   use_frameworks!
 
   # Pods for Open Data Project
+  
   # pod 'Charts', '~> 3.2.2'
   # pod 'RealmSwift', '~> 2.0.2'
+  
+  pod 'AnyChartiOS', '~> 1.0.3'
 end
