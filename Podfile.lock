@@ -5,7 +5,7 @@ DEPENDENCIES:
   - AnyChartiOS (~> 1.0.3)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AnyChartiOS
 
 SPEC CHECKSUMS:
@@ -13,4 +13,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 28724a036d2a8d064edd73a43e6539273752e420
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

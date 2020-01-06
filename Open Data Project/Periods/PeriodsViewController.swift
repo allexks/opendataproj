@@ -10,23 +10,77 @@ import UIKit
 
 class PeriodsViewController: UIViewController {
     
+    // MARK: - Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Constants
+    
+    private let cellReuseID = "periodCell"
+    private let segueID = "periodDetail"
+    
+    // MARK: - Properties
+    
     var pmType: PMType!
+    
+    private var periods: [PeriodViewModel] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
 
-        // Do any additional setup after loading the view.
+        updatePeriodViewModels()
     }
     
-
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+}
 
+// MARK: - Helpers
+
+private extension PeriodsViewController {
+    func updatePeriodViewModels() {
+        periods = DataRepository.shared.fetchAllPeriodViewModels(forPmType: pmType)
+    }
+    
+    func viewModelForIndexPath(_ indexPath: IndexPath) -> PeriodViewModel {
+        return periods[indexPath.row]
+    }
+}
+
+// MARK: - Table View Data Source
+extension PeriodsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return periods.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseID, for: indexPath)
+        let vm = viewModelForIndexPath(indexPath)
+        cell.textLabel?.text = vm.asString
+        return cell
+    }
+}
+
+// MARK: - Table View Delegate
+
+extension PeriodsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: segueID, sender: viewModelForIndexPath(indexPath))
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude // remove empty cell lines
+    }
 }

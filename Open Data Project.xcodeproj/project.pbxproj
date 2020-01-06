@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AFB84D723C357D000471021 /* PeriodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB84D623C357D000471021 /* PeriodDetailViewController.swift */; };
+		1AFB84DA23C35C3F00471021 /* PeriodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB84D923C35C3F00471021 /* PeriodViewModel.swift */; };
 		7407D00723BF6ED70023E92E /* OpenDataAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00623BF6ED70023E92E /* OpenDataAPIService.swift */; };
 		7407D00A23BF95A70023E92E /* ResourceMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00923BF95A70023E92E /* ResourceMetadata.swift */; };
 		7407D00C23BF98920023E92E /* ResourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00B23BF98920023E92E /* ResourceData.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AFB84D623C357D000471021 /* PeriodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodDetailViewController.swift; sourceTree = "<group>"; };
+		1AFB84D923C35C3F00471021 /* PeriodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewModel.swift; sourceTree = "<group>"; };
 		7407D00623BF6ED70023E92E /* OpenDataAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataAPIService.swift; sourceTree = "<group>"; };
 		7407D00923BF95A70023E92E /* ResourceMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceMetadata.swift; sourceTree = "<group>"; };
 		7407D00B23BF98920023E92E /* ResourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceData.swift; sourceTree = "<group>"; };
@@ -68,6 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AFB84D523C357B300471021 /* PeriodDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1AFB84D623C357D000471021 /* PeriodDetailViewController.swift */,
+			);
+			path = PeriodDetail;
+			sourceTree = "<group>";
+		};
+		1AFB84D823C35C3800471021 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1AFB84D923C35C3F00471021 /* PeriodViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		458BAC6C68A361B72748FFE4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +128,7 @@
 			children = (
 				741B91CB23BFF83900B30F01 /* DataRepository.swift */,
 				741B91C223BFE38D00B30F01 /* Models */,
+				1AFB84D823C35C3800471021 /* ViewModels */,
 				741B91D323C0068D00B30F01 /* Extensions */,
 			);
 			path = Common;
@@ -210,6 +231,7 @@
 				741B91D923C0CD3900B30F01 /* Stations */,
 				741B91E123C3104300B30F01 /* StationDetail */,
 				741B91DA23C0CD4F00B30F01 /* Periods */,
+				1AFB84D523C357B300471021 /* PeriodDetail */,
 				741B91C123BFE37400B30F01 /* Common */,
 				7407D00523BF6DDD0023E92E /* Networking */,
 				74D06EFB23BE3D2B004C09FA /* Assets.xcassets */,
@@ -301,20 +323,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AnyChartiOS/AnyChartiOS.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnyChartiOS.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B3B634896018CC2686502672 /* [CP] Check Pods Manifest.lock */ = {
@@ -353,6 +370,7 @@
 				7407D00723BF6ED70023E92E /* OpenDataAPIService.swift in Sources */,
 				741B91DC23C0CD7200B30F01 /* StationsViewController.swift in Sources */,
 				741B91DE23C0CD9A00B30F01 /* PeriodsViewController.swift in Sources */,
+				1AFB84DA23C35C3F00471021 /* PeriodViewModel.swift in Sources */,
 				7407D00A23BF95A70023E92E /* ResourceMetadata.swift in Sources */,
 				741B91D823C0CBC100B30F01 /* GroupingTableViewController.swift in Sources */,
 				7407D00C23BF98920023E92E /* ResourceData.swift in Sources */,
@@ -360,6 +378,7 @@
 				741B91C423BFEBA800B30F01 /* InitialTableViewController.swift in Sources */,
 				741B91D223BFFE2200B30F01 /* StationLocation.swift in Sources */,
 				741B91D023BFFDBB00B30F01 /* PMType.swift in Sources */,
+				1AFB84D723C357D000471021 /* PeriodDetailViewController.swift in Sources */,
 				741B91E023C2FE0B00B30F01 /* StationAnnotation.swift in Sources */,
 				74D06EF523BE3D24004C09FA /* AppDelegate.swift in Sources */,
 			);

@@ -76,18 +76,14 @@ class DataRepository {
         }
         return Array(result)
     }
+    
+    func fetchAllPeriodViewModels(forPmType pmType: PMType) -> [PeriodViewModel] {
+        // TODO
+        return []
+    }
 }
 
 extension ResourceData {
-    fileprivate var dateFormatter: DateFormatter {
-        let result = DateFormatter()
-        result.timeZone = TimeZone(secondsFromGMT: 0)
-        result.dateStyle = .long
-        result.timeStyle = .none
-        result.dateFormat = "dd.MM.yyyy"
-        return result
-    }
-    
     func toDataTable(guid: String, name: String) -> DataTable {
         guard let pmTypeString = name.matches("(10|2.5)( )?µm").first,
             let pmType = PMType.init(rawValue: pmTypeString.starts(with: "10") ?  "10" : "2.5")
@@ -99,6 +95,7 @@ extension ResourceData {
         var toDate: Date?
         
         let dateStrings = name.matches("[0-9][0-9]\\.[0-9][0-9]\\.[0-9][0-9][0-9][0-9]")
+        let dateFormatter = PeriodViewModel.dateFormatter
         if dateStrings.count == 2 {
             let dates = dateStrings.map { dateFormatter.date(from: $0)! }.sorted(by: <)
             fromDate = dates[0]
