@@ -66,6 +66,16 @@ class DataRepository {
             })
         }
     }
+    
+    func allLocations(forPmType pmType: PMType) -> [StationLocation] {
+        var result: Set<StationLocation> = []
+        for table in smallPeriodTables[pmType] ?? [] {
+            for row in table.rows {
+                result.update(with: row.location)
+            }
+        }
+        return Array(result)
+    }
 }
 
 extension ResourceData {
