@@ -21,6 +21,7 @@
 		741B91DC23C0CD7200B30F01 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91DB23C0CD7200B30F01 /* StationsViewController.swift */; };
 		741B91DE23C0CD9A00B30F01 /* PeriodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91DD23C0CD9A00B30F01 /* PeriodsViewController.swift */; };
 		741B91E023C2FE0B00B30F01 /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91DF23C2FE0B00B30F01 /* StationAnnotation.swift */; };
+		741B91E323C3108400B30F01 /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91E223C3108400B30F01 /* StationDetailViewController.swift */; };
 		74D06EF523BE3D24004C09FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D06EF423BE3D24004C09FA /* AppDelegate.swift */; };
 		74D06EFA23BE3D24004C09FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EF823BE3D24004C09FA /* Main.storyboard */; };
 		74D06EFC23BE3D2B004C09FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EFB23BE3D2B004C09FA /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		741B91DB23C0CD7200B30F01 /* StationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
 		741B91DD23C0CD9A00B30F01 /* PeriodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodsViewController.swift; sourceTree = "<group>"; };
 		741B91DF23C2FE0B00B30F01 /* StationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAnnotation.swift; sourceTree = "<group>"; };
+		741B91E223C3108400B30F01 /* StationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
 		74D06EF123BE3D24004C09FA /* Open Data Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Data Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D06EF423BE3D24004C09FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74D06EF923BE3D24004C09FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -172,6 +174,14 @@
 			path = Periods;
 			sourceTree = "<group>";
 		};
+		741B91E123C3104300B30F01 /* StationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				741B91E223C3108400B30F01 /* StationDetailViewController.swift */,
+			);
+			path = StationDetail;
+			sourceTree = "<group>";
+		};
 		74D06EE823BE3D24004C09FA = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +208,7 @@
 				741B91BE23BFE31000B30F01 /* Initial */,
 				741B91D623C0CB9A00B30F01 /* Grouping */,
 				741B91D923C0CD3900B30F01 /* Stations */,
+				741B91E123C3104300B30F01 /* StationDetail */,
 				741B91DA23C0CD4F00B30F01 /* Periods */,
 				741B91C123BFE37400B30F01 /* Common */,
 				7407D00523BF6DDD0023E92E /* Networking */,
@@ -335,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				741B91E323C3108400B30F01 /* StationDetailViewController.swift in Sources */,
 				741B91BD23BFDAA100B30F01 /* ResourceList.swift in Sources */,
 				741B91CE23BFF86C00B30F01 /* DataTable.swift in Sources */,
 				741B91D523C006A300B30F01 /* String+matches.swift in Sources */,

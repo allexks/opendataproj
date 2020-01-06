@@ -15,13 +15,17 @@ class StationsViewController: UIViewController {
     @IBOutlet private weak var mapView: MKMapView!
     @IBOutlet private weak var tableView: UITableView!
     
-    // MARK: - Properties
+    // MARK: - Constants
     
-    let stationCellReuseID = "stationCell"
+    private let stationCellReuseID = "stationCell"
+    private let stationAnnotationReuseID = "stationAnnotation"
+    private let segueID = "stationDetails"
+    
+    // MARK: - Properties
     
     var pmType: PMType!
     
-    var annotations: [MKAnnotation] = [] {
+    private var annotations: [MKAnnotation] = [] {
         didSet {
             mapView.addAnnotations(annotations)
             tableView.reloadData()
@@ -38,6 +42,25 @@ class StationsViewController: UIViewController {
         mapView.delegate = self
 
         addAnnotationsForAllLocations()
+    }
+    
+    // MARK: - Actions
+    
+    @objc func onAnnotationButtonTap(_ sender: UIButton) {
+        performSegue(withIdentifier: segueID, sender: sender)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let id = segue.identifier,
+            id == segueID,
+        let nextVC = segue.destination as? StationDetailViewController,
+        let selectedAnnotation = mapView.selectedAnnotations.first as? StationAnnotation else {
+            fatalError("tuka neshto ne e nared")
+        }
+        
+        nextVC.station = selectedAnnotation.station
     }
 }
 
@@ -103,6 +126,15 @@ extension StationsViewController: MKMapViewDelegate {
         if selectedIndexPath == nil || selectedIndexPath! != correspondingCellIndexPath {
             tableView.selectRow(at: correspondingCellIndexPath, animated: true, scrollPosition: .middle)
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: stationAnnotationReuseID)
         
+        let detailButton = UIButton(type: .detailDisclosure)
+        detailButton.addTarget(self, action: #selector(onAnnotationButtonTap(_:)), for: .touchUpInside)
+        annotationView.rightCalloutAccessoryView = detailButton
+        annotationView.canShowCallout = true
+        return annotationView
     }
 }

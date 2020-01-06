@@ -43,7 +43,7 @@
                         </label>
                         <sections>
                             <tableViewSection headerTitle="Изберете категория" id="LhB-4N-s2q">
-                                <mutableString key="footerTitle">Данни от Националната система за контрол на качеството на атмосферния въздух (https://data.egov.bg/data/view/f7d45237-a310-4c43-b37f-db434f8edf3d) от измерени концентрации на основните показатели за качеството на атмосферния въздух, данните се създават и поддържат съгласно Закона за чистотата на атмосферния въздух. Условия за предоставяне на информация без защитени авторски права.</mutableString>
+                                <string key="footerTitle">Данни от Националната система за контрол на качеството на атмосферния въздух (https://data.egov.bg/data/view/f7d45237-a310-4c43-b37f-db434f8edf3d) от измерени концентрации на основните показатели за качеството на атмосферния въздух, данните се създават и поддържат съгласно Закона за чистотата на атмосферния въздух. Условия за предоставяне на информация без защитени авторски права.</string>
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ATO-Jf-0bU" style="IBUITableViewCellStyleDefault" id="Kkt-Uw-hPe">
                                         <rect key="frame" x="0.0" y="110.33333333333334" width="375" height="44"/>
@@ -234,11 +234,27 @@
                     <connections>
                         <outlet property="mapView" destination="qbI-g3-Xjx" id="Y5A-aB-VqH"/>
                         <outlet property="tableView" destination="Kgs-bu-fVY" id="Ez4-Kv-GZm"/>
+                        <segue destination="nDR-DO-j4M" kind="show" identifier="stationDetails" id="N5r-QM-x7y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdG-h9-Mza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1321" y="-166"/>
+        </scene>
+        <!--Station Detail View Controller-->
+        <scene sceneID="e1X-tt-pLY">
+            <objects>
+                <viewController id="nDR-DO-j4M" customClass="StationDetailViewController" customModule="Open_Data_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9HX-Ye-X7F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="s18-Cd-vgu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tro-6M-hZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2334" y="-166"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

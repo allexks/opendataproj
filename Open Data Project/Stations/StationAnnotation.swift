@@ -10,7 +10,7 @@ import MapKit
 
 class StationAnnotation: NSObject, MKAnnotation {
     
-    private let station: StationLocation
+    let station: StationLocation
     
     init(_ station: StationLocation) {
         self.station = station
