@@ -20,6 +20,7 @@
 		741B91D823C0CBC100B30F01 /* GroupingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91D723C0CBC100B30F01 /* GroupingTableViewController.swift */; };
 		741B91DC23C0CD7200B30F01 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91DB23C0CD7200B30F01 /* StationsViewController.swift */; };
 		741B91DE23C0CD9A00B30F01 /* PeriodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91DD23C0CD9A00B30F01 /* PeriodsViewController.swift */; };
+		741B91E023C2FE0B00B30F01 /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741B91DF23C2FE0B00B30F01 /* StationAnnotation.swift */; };
 		74D06EF523BE3D24004C09FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D06EF423BE3D24004C09FA /* AppDelegate.swift */; };
 		74D06EFA23BE3D24004C09FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EF823BE3D24004C09FA /* Main.storyboard */; };
 		74D06EFC23BE3D2B004C09FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EFB23BE3D2B004C09FA /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		741B91D723C0CBC100B30F01 /* GroupingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupingTableViewController.swift; sourceTree = "<group>"; };
 		741B91DB23C0CD7200B30F01 /* StationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
 		741B91DD23C0CD9A00B30F01 /* PeriodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodsViewController.swift; sourceTree = "<group>"; };
+		741B91DF23C2FE0B00B30F01 /* StationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationAnnotation.swift; sourceTree = "<group>"; };
 		74D06EF123BE3D24004C09FA /* Open Data Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Data Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D06EF423BE3D24004C09FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74D06EF923BE3D24004C09FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				741B91DB23C0CD7200B30F01 /* StationsViewController.swift */,
+				741B91DF23C2FE0B00B30F01 /* StationAnnotation.swift */,
 			);
 			path = Stations;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				74D06EED23BE3D24004C09FA /* Sources */,
 				74D06EEE23BE3D24004C09FA /* Frameworks */,
 				74D06EEF23BE3D24004C09FA /* Resources */,
+				AA032EA7F903BABA8195CE48 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +284,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		AA032EA7F903BABA8195CE48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AnyChartiOS/AnyChartiOS.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnyChartiOS.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B3B634896018CC2686502672 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +348,7 @@
 				741B91C423BFEBA800B30F01 /* InitialTableViewController.swift in Sources */,
 				741B91D223BFFE2200B30F01 /* StationLocation.swift in Sources */,
 				741B91D023BFFDBB00B30F01 /* PMType.swift in Sources */,
+				741B91E023C2FE0B00B30F01 /* StationAnnotation.swift in Sources */,
 				74D06EF523BE3D24004C09FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
