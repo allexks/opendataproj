@@ -10,10 +10,15 @@ import UIKit
 
 class PeriodDetailViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    var periodViewModel: PeriodViewModel!
+    
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(periodViewModel.asString) // DEBUG
         // TODO: Draw some charts!
     }
 

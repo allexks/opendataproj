@@ -41,8 +41,13 @@ class PeriodsViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard segue.identifier == segueID, let nextVC = segue.destination as? PeriodDetailViewController else {
+            fatalError("stiga e")
+        }
+        guard let vm = sender as? PeriodViewModel else {
+            fatalError("veche ne predavame viewmomdela kato sender?")
+        }
+        nextVC.periodViewModel = vm
     }
 }
 

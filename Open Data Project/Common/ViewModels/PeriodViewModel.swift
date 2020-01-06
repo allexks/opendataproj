@@ -29,14 +29,15 @@ class PeriodViewModel {
     }
     
     var stringFrom: String {
-        return "" // TODO
+        return PeriodViewModel.dateFormatter.string(from: dateFrom)
     }
     
     var stringTo: String {
-        return "" // TODO
+        return PeriodViewModel.dateFormatter.string(from: dateTo)
     }
     
     var asString: String {
-        return "\(stringFrom) – \(stringTo)"
+        return isSumOfAllPeriods ? "Всички години (2005-2018)" : "\(stringFrom) – \(stringTo)"
+        // TODO: Don't hardcode 2005-2018
     }
 }

@@ -20,6 +20,9 @@ class DataRepository {
         }
     }
     
+    let wholePeriodFromDate = Date(timeIntervalSince1970: 1104537600) // 1 Jan 2005
+    let wholePeriodToDate = Date(timeIntervalSince1970: 1546214400) // 31 Dec 2018
+    
     private static let apiService = OpenDataAPIService()
     
     private var wholePeriodTables: [PMType: [DataTable]]
@@ -78,8 +81,11 @@ class DataRepository {
     }
     
     func fetchAllPeriodViewModels(forPmType pmType: PMType) -> [PeriodViewModel] {
-        // TODO
-        return []
+        return (wholePeriodTables[pmType]! + smallPeriodTables[pmType]!).map {
+            $0.toPeriodViewModel()
+        }.sorted {
+            $0.dateFrom < $1.dateFrom
+        }
     }
 }
 
@@ -123,5 +129,19 @@ extension ResourceData {
             columnNames: columnNames,
             rows: rows
         )
+    }
+}
+
+extension DataTable {
+    func toPeriodViewModel() -> PeriodViewModel {
+        guard let from = dataCollectedFrom, let to = dataCollectedTo else {
+            return PeriodViewModel(
+                dateFrom: DataRepository.shared.wholePeriodFromDate,
+                dateTo: DataRepository.shared.wholePeriodToDate,
+                isSumOfAllPeriods: true
+            )
+        }
+        
+        return PeriodViewModel(dateFrom: from, dateTo: to, isSumOfAllPeriods: false)
     }
 }
