@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A6A55A823C4EB96006A7D1E /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A55A723C4EB96006A7D1E /* StationViewModel.swift */; };
 		1AFB84D723C357D000471021 /* PeriodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB84D623C357D000471021 /* PeriodDetailViewController.swift */; };
 		1AFB84DA23C35C3F00471021 /* PeriodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB84D923C35C3F00471021 /* PeriodViewModel.swift */; };
 		7407D00723BF6ED70023E92E /* OpenDataAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00623BF6ED70023E92E /* OpenDataAPIService.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A6A55A723C4EB96006A7D1E /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
 		1AFB84D623C357D000471021 /* PeriodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodDetailViewController.swift; sourceTree = "<group>"; };
 		1AFB84D923C35C3F00471021 /* PeriodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewModel.swift; sourceTree = "<group>"; };
 		7407D00623BF6ED70023E92E /* OpenDataAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataAPIService.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				1AFB84D923C35C3F00471021 /* PeriodViewModel.swift */,
+				1A6A55A723C4EB96006A7D1E /* StationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			files = (
 				741B91E323C3108400B30F01 /* StationDetailViewController.swift in Sources */,
 				741B91BD23BFDAA100B30F01 /* ResourceList.swift in Sources */,
+				1A6A55A823C4EB96006A7D1E /* StationViewModel.swift in Sources */,
 				741B91CE23BFF86C00B30F01 /* DataTable.swift in Sources */,
 				741B91D523C006A300B30F01 /* String+matches.swift in Sources */,
 				7407D00723BF6ED70023E92E /* OpenDataAPIService.swift in Sources */,

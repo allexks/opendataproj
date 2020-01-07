@@ -312,9 +312,24 @@
                     <view key="view" contentMode="scaleToFill" id="9HX-Ye-X7F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDy-53-maW" customClass="AnyChartView" customModule="AnyChartiOS">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QDy-53-maW" firstAttribute="leading" secondItem="s18-Cd-vgu" secondAttribute="leading" id="dJH-5f-Dhq"/>
+                            <constraint firstItem="QDy-53-maW" firstAttribute="top" secondItem="s18-Cd-vgu" secondAttribute="top" id="kOx-ha-Bgu"/>
+                            <constraint firstItem="s18-Cd-vgu" firstAttribute="trailing" secondItem="QDy-53-maW" secondAttribute="trailing" id="mS3-Zi-KD1"/>
+                            <constraint firstItem="s18-Cd-vgu" firstAttribute="bottom" secondItem="QDy-53-maW" secondAttribute="bottom" id="oaC-uf-G9F"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="s18-Cd-vgu"/>
                     </view>
+                    <connections>
+                        <outlet property="chartView" destination="QDy-53-maW" id="DmI-St-837"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tro-6M-hZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

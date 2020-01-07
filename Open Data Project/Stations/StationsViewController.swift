@@ -60,6 +60,7 @@ class StationsViewController: UIViewController {
             fatalError("tuka neshto ne e nared")
         }
         
+        nextVC.pmType = pmType
         nextVC.station = selectedAnnotation.station
     }
 }
@@ -112,7 +113,6 @@ extension StationsViewController: UITableViewDelegate {
 // MARK: - Map View Delegate
 
 extension StationsViewController: MKMapViewDelegate {
-    // TODO: show nice accessory and button to next ViewController
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let annotation = view.annotation,
