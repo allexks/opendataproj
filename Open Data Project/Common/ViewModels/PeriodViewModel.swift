@@ -21,10 +21,12 @@ class PeriodViewModel {
     let dateFrom: Date
     let dateTo: Date
     let isSumOfAllPeriods: Bool
+    let relatedDataTable: DataTable
     
-    init(dateFrom: Date, dateTo: Date, isSumOfAllPeriods: Bool = false) {
+    init(dateFrom: Date, dateTo: Date, relatedDataTable: DataTable, isSumOfAllPeriods: Bool = false) {
         self.dateFrom = dateFrom
         self.dateTo = dateTo
+        self.relatedDataTable = relatedDataTable
         self.isSumOfAllPeriods = isSumOfAllPeriods
     }
     

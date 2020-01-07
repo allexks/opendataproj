@@ -138,10 +138,11 @@ extension DataTable {
             return PeriodViewModel(
                 dateFrom: DataRepository.shared.wholePeriodFromDate,
                 dateTo: DataRepository.shared.wholePeriodToDate,
+                relatedDataTable: self,
                 isSumOfAllPeriods: true
             )
         }
         
-        return PeriodViewModel(dateFrom: from, dateTo: to, isSumOfAllPeriods: false)
+        return PeriodViewModel(dateFrom: from, dateTo: to, relatedDataTable: self, isSumOfAllPeriods: false)
     }
 }
