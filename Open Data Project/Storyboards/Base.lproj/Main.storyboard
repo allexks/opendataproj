@@ -220,10 +220,25 @@
                     <view key="view" contentMode="scaleToFill" id="4rz-Dy-5cv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-fa-ujZ" customClass="AnyChartView" customModule="AnyChartiOS">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cAy-kC-6Ha" firstAttribute="bottom" secondItem="Fna-fa-ujZ" secondAttribute="bottom" id="2zc-i1-kJW"/>
+                            <constraint firstItem="Fna-fa-ujZ" firstAttribute="top" secondItem="cAy-kC-6Ha" secondAttribute="top" id="HfD-oT-2oa"/>
+                            <constraint firstItem="cAy-kC-6Ha" firstAttribute="trailing" secondItem="Fna-fa-ujZ" secondAttribute="trailing" id="NO2-8U-p93"/>
+                            <constraint firstItem="Fna-fa-ujZ" firstAttribute="leading" secondItem="cAy-kC-6Ha" secondAttribute="leading" id="jc7-Hc-Dac"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cAy-kC-6Ha"/>
                     </view>
                     <navigationItem key="navigationItem" id="bxR-Yd-m7Y"/>
+                    <connections>
+                        <outlet property="chartView" destination="Fna-fa-ujZ" id="TNq-vq-Iuc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7as-94-9sw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
