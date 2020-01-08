@@ -10,16 +10,40 @@ import UIKit
 
 class InitialTableViewController: UITableViewController {
     
+    // MARK: - Properties
+    
+    private lazy var loadingIndicatorView: UIView = {
+        let result = UIView()
+        let indicator = UIActivityIndicatorView(style: .whiteLarge)
+        result.addSubview(indicator)
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.centerXAnchor.constraint(equalTo: result.centerXAnchor).isActive = true
+        indicator.centerYAnchor.constraint(equalTo: result.centerYAnchor).isActive = true
+        indicator.widthAnchor.constraint(equalTo: result.widthAnchor).isActive = true
+        indicator.heightAnchor.constraint(equalTo: result.heightAnchor).isActive = true
+        return result
+    }()
+    
+    private var isLoading: Bool = true {
+        didSet {
+            loadingIndicatorView.isHidden = !isLoading
+            tableView.isHidden = isLoading
+        }
+    }
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        DataRepository.shared.fetchAllStatisticalData { _ in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            // TODO: Handle error
-        }
+        view.addSubview(loadingIndicatorView)
+        loadingIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        loadingIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loadingIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        loadingIndicatorView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        loadingIndicatorView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        
+        loadData()
     }
 
     // MARK: - Navigation
@@ -36,6 +60,18 @@ class InitialTableViewController: UITableViewController {
             nextVC.pmType = .pm10
         default:
             fatalError("brat zako pipash imeto na segue-to sq")
+        }
+    }
+}
+
+private extension InitialTableViewController {
+    func loadData() {
+        isLoading = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
+        DataRepository.shared.fetchAllStatisticalData { [weak self] _ in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            self?.isLoading = false
         }
     }
 }
