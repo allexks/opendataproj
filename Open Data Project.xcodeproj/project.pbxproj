@@ -10,6 +10,7 @@
 		1A6A55A823C4EB96006A7D1E /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A55A723C4EB96006A7D1E /* StationViewModel.swift */; };
 		1AFB84D723C357D000471021 /* PeriodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB84D623C357D000471021 /* PeriodDetailViewController.swift */; };
 		1AFB84DA23C35C3F00471021 /* PeriodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB84D923C35C3F00471021 /* PeriodViewModel.swift */; };
+		4C9B04095760DC80DD7F8220 /* Pods_Open_Data_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0916B8C11A5258E03D4F8324 /* Pods_Open_Data_Project.framework */; };
 		7407D00723BF6ED70023E92E /* OpenDataAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00623BF6ED70023E92E /* OpenDataAPIService.swift */; };
 		7407D00A23BF95A70023E92E /* ResourceMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00923BF95A70023E92E /* ResourceMetadata.swift */; };
 		7407D00C23BF98920023E92E /* ResourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407D00B23BF98920023E92E /* ResourceData.swift */; };
@@ -29,13 +30,14 @@
 		74D06EFA23BE3D24004C09FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EF823BE3D24004C09FA /* Main.storyboard */; };
 		74D06EFC23BE3D2B004C09FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EFB23BE3D2B004C09FA /* Assets.xcassets */; };
 		74D06EFF23BE3D2B004C09FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D06EFD23BE3D2B004C09FA /* LaunchScreen.storyboard */; };
-		C87D13E22FDB2B2111BD17F4 /* Pods_Open_Data_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E227CFCA77F4C0898548499A /* Pods_Open_Data_Project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0916B8C11A5258E03D4F8324 /* Pods_Open_Data_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Open_Data_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6A55A723C4EB96006A7D1E /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
 		1AFB84D623C357D000471021 /* PeriodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodDetailViewController.swift; sourceTree = "<group>"; };
 		1AFB84D923C35C3F00471021 /* PeriodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewModel.swift; sourceTree = "<group>"; };
+		3A6623401D87CDEAD12D9E47 /* Pods-Open Data Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Open Data Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Open Data Project/Pods-Open Data Project.debug.xcconfig"; sourceTree = "<group>"; };
 		7407D00623BF6ED70023E92E /* OpenDataAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataAPIService.swift; sourceTree = "<group>"; };
 		7407D00923BF95A70023E92E /* ResourceMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceMetadata.swift; sourceTree = "<group>"; };
 		7407D00B23BF98920023E92E /* ResourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceData.swift; sourceTree = "<group>"; };
@@ -57,9 +59,7 @@
 		74D06EFB23BE3D2B004C09FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74D06EFE23BE3D2B004C09FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74D06F0023BE3D2B004C09FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D4A1C4A1B1281DABC9A6F91 /* Pods-Open Data Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Open Data Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Open Data Project/Pods-Open Data Project.release.xcconfig"; sourceTree = "<group>"; };
-		E227CFCA77F4C0898548499A /* Pods_Open_Data_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Open_Data_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED8AAB1D217F8EA26411A919 /* Pods-Open Data Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Open Data Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Open Data Project/Pods-Open Data Project.debug.xcconfig"; sourceTree = "<group>"; };
+		D322143A939ABAFAEAB5BF0F /* Pods-Open Data Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Open Data Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Open Data Project/Pods-Open Data Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C87D13E22FDB2B2111BD17F4 /* Pods_Open_Data_Project.framework in Frameworks */,
+				4C9B04095760DC80DD7F8220 /* Pods_Open_Data_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,13 +91,12 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		458BAC6C68A361B72748FFE4 /* Pods */ = {
+		7400B42E39642AFE3C9D7DCB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED8AAB1D217F8EA26411A919 /* Pods-Open Data Project.debug.xcconfig */,
-				7D4A1C4A1B1281DABC9A6F91 /* Pods-Open Data Project.release.xcconfig */,
+				0916B8C11A5258E03D4F8324 /* Pods_Open_Data_Project.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7407D00423BF6DB00023E92E /* Storyboards */ = {
@@ -211,8 +210,8 @@
 			children = (
 				74D06EF323BE3D24004C09FA /* Open Data Project */,
 				74D06EF223BE3D24004C09FA /* Products */,
-				458BAC6C68A361B72748FFE4 /* Pods */,
-				7A744008696311189902ABE3 /* Frameworks */,
+				934E69139D82C4294DDDBAEC /* Pods */,
+				7400B42E39642AFE3C9D7DCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,12 +242,13 @@
 			path = "Open Data Project";
 			sourceTree = "<group>";
 		};
-		7A744008696311189902ABE3 /* Frameworks */ = {
+		934E69139D82C4294DDDBAEC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E227CFCA77F4C0898548499A /* Pods_Open_Data_Project.framework */,
+				3A6623401D87CDEAD12D9E47 /* Pods-Open Data Project.debug.xcconfig */,
+				D322143A939ABAFAEAB5BF0F /* Pods-Open Data Project.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,11 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74D06F0323BE3D2B004C09FA /* Build configuration list for PBXNativeTarget "Open Data Project" */;
 			buildPhases = (
-				B3B634896018CC2686502672 /* [CP] Check Pods Manifest.lock */,
+				8B5A37084B5FF5F3A12C0EAD /* [CP] Check Pods Manifest.lock */,
 				74D06EED23BE3D24004C09FA /* Sources */,
 				74D06EEE23BE3D24004C09FA /* Frameworks */,
 				74D06EEF23BE3D24004C09FA /* Resources */,
-				AA032EA7F903BABA8195CE48 /* [CP] Embed Pods Frameworks */,
+				A96A07C245674FAA19B297EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,24 +320,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AA032EA7F903BABA8195CE48 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B3B634896018CC2686502672 /* [CP] Check Pods Manifest.lock */ = {
+		8B5A37084B5FF5F3A12C0EAD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,6 +340,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A96A07C245674FAA19B297EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AnyChartiOS/AnyChartiOS.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnyChartiOS.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Open Data Project/Pods-Open Data Project-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -528,7 +533,7 @@
 		};
 		74D06F0423BE3D2B004C09FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED8AAB1D217F8EA26411A919 /* Pods-Open Data Project.debug.xcconfig */;
+			baseConfigurationReference = 3A6623401D87CDEAD12D9E47 /* Pods-Open Data Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -550,7 +555,7 @@
 		};
 		74D06F0523BE3D2B004C09FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D4A1C4A1B1281DABC9A6F91 /* Pods-Open Data Project.release.xcconfig */;
+			baseConfigurationReference = D322143A939ABAFAEAB5BF0F /* Pods-Open Data Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

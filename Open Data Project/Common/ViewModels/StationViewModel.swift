@@ -9,6 +9,20 @@
 import Foundation
 
 class StationViewModel {
+    static let monthFormatter: DateFormatter = {
+        var result = DateFormatter()
+        result.dateFormat = "LLLL"
+        result.timeZone = TimeZone(secondsFromGMT: 0)
+        return result
+    }()
+    
+    static let yearFormatter: DateFormatter = {
+        var result = DateFormatter()
+        result.dateFormat = "yyyy"
+        result.timeZone = TimeZone(secondsFromGMT: 0)
+        return result
+    }()
+    
     let station: StationLocation
     var dataPoints: [DataPoint]
     
@@ -20,8 +34,15 @@ class StationViewModel {
 
 extension StationViewModel {
     struct DataPoint {
-        let year: String
+        let periodStart: Date
+        let periodEnd: Date
         let avgValue: Double
         let maxValue: Double
+        
+        var period: String {
+            let yearFormatter = StationViewModel.yearFormatter
+            let monthFormatter = StationViewModel.monthFormatter
+            return "\(monthFormatter.string(from: periodStart)) - \(monthFormatter.string(from: periodEnd)) \(yearFormatter.string(from: periodEnd))"
+        }
     }
 }

@@ -20,15 +20,6 @@ class DataRepository {
         }
     }
     
-    static let yearOnlyDateFormatter: DateFormatter = {
-        var result = DateFormatter()
-        result.dateFormat = "yyyy"
-        result.dateStyle = .short
-        result.timeStyle = .none
-        result.timeZone = TimeZone(secondsFromGMT: 0)
-        return result
-    }()
-    
     let wholePeriodFromDate = Date(timeIntervalSince1970: 1104537600) // 1 Jan 2005
     let wholePeriodToDate = Date(timeIntervalSince1970: 1546214400) // 31 Dec 2018
     
@@ -108,14 +99,9 @@ class DataRepository {
                 continue
             }
             
-            let formatter = DataRepository.yearOnlyDateFormatter
-            let yearFrom = formatter.string(from: dateFrom)
-            let yearTo = formatter.string(from: dateTo)
-            
-            if (yearFrom == yearTo) {
-                result.dataPoints.append(row.toDataPoint(for: yearFrom))
-            }
+            result.dataPoints.append(row.toDataPoint(dateStart: dateFrom, dateEnd: dateTo))
         }
+        result.dataPoints.sort { $0.periodEnd < $1.periodEnd }
         return result
     }
 }
@@ -179,7 +165,7 @@ extension DataTable {
 }
 
 extension DataTable.Row {
-    func toDataPoint(for year: String) -> StationViewModel.DataPoint {
-        return StationViewModel.DataPoint(year: year, avgValue: avgValue, maxValue: maxValue)
+    func toDataPoint(dateStart: Date, dateEnd: Date) -> StationViewModel.DataPoint {
+        return StationViewModel.DataPoint(periodStart: dateStart, periodEnd: dateEnd, avgValue: avgValue, maxValue: maxValue)
     }
 }
