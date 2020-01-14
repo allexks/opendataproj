@@ -44,9 +44,11 @@ private extension PeriodDetailViewController {
         let jumpLineData = set.mapAs(mapping: "{x: 'x', value: 'jumpLine'}")
         
         let bar = chart.bar(data: barData)
+        bar.name(name: "Максимална стойност")
         bar.labels().format(token: "{%Value}{decimalsCount:2} µg/m3")
         
         let jumpLine = chart.jumpLine(data: jumpLineData)
+        jumpLine.name(name: "Средна стойност")
         jumpLine.stroke(settings: "2 #60727B")
         jumpLine.labels().enabled(enabled: false)
         

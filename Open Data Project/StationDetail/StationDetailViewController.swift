@@ -96,7 +96,7 @@ private extension StationDetailViewController {
         var result: [DataEntry] = []
         for datapoint in stationViewModel.dataPoints {
             result.append(CustomDataEntry(
-                x: datapoint.year,
+                x: datapoint.period,
                 value: datapoint.avgValue,
                 value2: datapoint.maxValue
             ))

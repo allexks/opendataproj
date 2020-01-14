@@ -9,19 +9,6 @@
 import UIKit
 
 class InitialTableViewController: UITableViewController {
-    
-    // MARK: - Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        DataRepository.shared.fetchAllStatisticalData { _ in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            // TODO: Handle error
-        }
-    }
-
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
