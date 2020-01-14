@@ -13,15 +13,17 @@
         </td>
         <td width="33%">
             <img src="Screenshots/2.png" alt="Начален екран - категория фини прахови частици" />
+    </tr>
+    <tr>
         </td>
         <td width="33%">
             <img src="Screenshots/3.png" alt="Избор на групиране" />
         </td>
-    </tr>
-    <tr>
         <td width="33%">
             <img src="Screenshots/4.png" alt="Групиране по градове" />
         </td>
+    </tr>
+    <tr>
         <td width="33%">
             <img src="Screenshots/5.png" alt="Групиране по градове - селектирана локация" />
         </td>
@@ -36,14 +38,16 @@
         <td width="33%">
             <img src="Screenshots/8.png" alt="Групиране по периоди" />
         </td>
-        <td width="33%">
-            <img src="Screenshots/9.png" alt="Селектиран период - графика на състоянието за всички локации" />
-        </td>
     </tr>
     <tr>
         <td width="33%">
+            <img src="Screenshots/9.png" alt="Селектиран период - графика на състоянието за всички локации" />
+        </td>
+        <td width="33%">
             <img src="Screenshots/10.png" alt="Интерактивна визуализация" />
         </td>
+    </tr>
+    <tr>
         <td width="33%">
             <img src="Screenshots/11.png" alt="Интерактивна визуализация" />
         </td>
