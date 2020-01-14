@@ -6,17 +6,49 @@
 
 ## Снимки от приложението
 
-![Начален екран - зареждане](Screenshots/1.png)
-![Начален екран - категория фини прахови частици](Screenshots/2.png)
-![Избор на групиране](Screenshots/3.png)
-![Групиране по градове](Screenshots/4.png)
-![Групиране по градове - селектирана локация](Screenshots/5.png)
-![Селектирана локация - графика на изменението за всички периоди](Screenshots/6.png)
-![Интерактивна визуализация](Screenshots/7.png)
-![Групиране по периоди](Screenshots/8.png)
-![Селектиран период - графика на състоянието за всички локации](Screenshots/9.png)
-![Интерактивна визуализация](Screenshots/10.png)
-![Интерактивна визуализация](Screenshots/11.png)
+<table>
+    <tr>
+        <td width="33%">
+            <img src="Screenshots/1.png" alt="Начален екран - зареждане" />
+        </td>
+        <td width="33%">
+            <img src="Screenshots/2.png" alt="Начален екран - категория фини прахови частици" />
+        </td>
+        <td width="33%">
+            <img src="Screenshots/3.png" alt="Избор на групиране" />
+        </td>
+    </tr>
+    <tr>
+        <td width="33%">
+            <img src="Screenshots/4.png" alt="Групиране по градове" />
+        </td>
+        <td width="33%">
+            <img src="Screenshots/5.png" alt="Групиране по градове - селектирана локация" />
+        </td>
+        <td width="33%">
+            <img src="Screenshots/6.png" alt="Селектирана локация - графика на изменението за всички периоди" />
+        </td>
+    </tr>
+    <tr>
+        <td width="33%">
+            <img src="Screenshots/7.png" alt="Интерактивна визуализация" />
+        </td>
+        <td width="33%">
+            <img src="Screenshots/8.png" alt="Групиране по периоди" />
+        </td>
+        <td width="33%">
+            <img src="Screenshots/9.png" alt="Селектиран период - графика на състоянието за всички локации" />
+        </td>
+    </tr>
+    <tr>
+        <td width="33%">
+            <img src="Screenshots/10.png" alt="Интерактивна визуализация" />
+        </td>
+        <td width="33%">
+            <img src="Screenshots/11.png" alt="Интерактивна визуализация" />
+        </td>
+    </tr>
+</table>
 
 ## Лиценз
 
